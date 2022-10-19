@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/details.js"></script>
+
+  <title>Atlas</title>
+</head>
+
+<body>
+
+  <div class="container marginHeader">
+
+    <div class="row">
+      <div class="col-6 textCenter" id="atlasNumber">
+
+      </div>
+      <div class="col-6">
+        <div class="row" id="detail-monster">
+          <div class="textCenter">
+            <button id="boutonLocation" class="btn btn-success" type="button" data-bs-toggle="modal"
+              data-bs-target="#Location">Locations</button>
+
+            <button id="boutonGenerer" class="btn btn-success" type="button">Generate</button>
+          </div>
+        </div>
+        <ul class=" row" id="satellites">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row m-1">
+    <div class="col-12 ">
+      <table class="table table-bordered" id="monsterTab">
+        <thead>
+          <tr>
+            <th>Affinity</th>
+            <th>Health</th>
+            <th>Damage</th>
+            <th>Speed</th>
+            <th>Critical</th>
+            <th>Talents</th>
+            <th>Kernel</th>
+            <th>Hash</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<div class="modal fade" id="Location" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Locations</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table id="LocationTable" class="table">
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>Time</th>
+              <th>Season</th>
+              <th>Rates</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <form>
+          <div class="row">
+            <div class="col">
+              <input id="formsPosition" type="text" class="form-control" placeholder="Position" maxlength="5">
+            </div>
+            <div class="col">
+              <select class="form-control" id="formsTime">
+                <option>Day</option>
+                <option>Night</option>
+                <option>Morning</option>
+              </select>
+            </div>
+            <div class="col">
+              <select class="form-control" id="formsSeason">
+                <option>Autumn</option>
+                <option>Spring</option>
+                <option>Summer</option>
+                <option>Winter</option>
+              </select>
+            </div>
+            <div class="col">
+              <select class="form-control" id="formsRates">
+                <option>Common</option>
+                <option>Limited</option>
+                <option>Rare</option>
+                <option>Uncommon</option>
+              </select>
+            </div>
+            <div class="col">
+              <button id="addLocation" type="button" class="btn btn-secondary">Add</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

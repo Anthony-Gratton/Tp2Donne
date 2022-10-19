@@ -24,7 +24,30 @@
     width: 64px;
 }
 
+.monsterDetails {
+    width: 128px;
+}
+
 .textCenter {
     text-align: center;
     vertical-align: middle;
+}
+
+.marginHeader {
+    margin-top: 3em;
+}
+
+.marginTable {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.colored-hash .block {
+    letter-spacing: -8px;
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    overflow: hidden;
+    padding: 0;
+    line-height: 1;
 }
