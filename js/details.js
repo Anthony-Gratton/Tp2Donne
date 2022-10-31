@@ -134,7 +134,7 @@ async function genererMonstre(atlasNumber) {
       monstersDts += `${monsterDetails.hash.substring(62)}`
       monstersDts += '</div></td></tr>';
 
-      $('#monsterTab tbody').append(monstersDts);
+      $('#monsterTab tbody').prepend(monstersDts);
 
     }
   } catch (err) {
